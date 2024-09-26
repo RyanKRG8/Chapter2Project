@@ -1,16 +1,19 @@
 #include <iostream>
+using namespace std;
 
 int main() {
-    // The rate the ocean will rise.
-    const double riseRate = 1.5;
+    // Define the constants town, highway mpg & the tank capacity.
+    const double TOWN_MPG = 23.5;
+    const double HIGHWAY_MPG = 28.9;
+    const double GAS_TANK_SIZE = 20.0;
 
-    // How many X years it will have risen by.
-    double riseIn5Years = riseRate * 5;
-    double riseIn7Years = riseRate * 7;
-    double riseIn10Years = riseRate * 10;
+    // Calculate the distance the car can travel in town and on highway
+    double townDistance = GAS_TANK_SIZE * TOWN_MPG;
+    double highwayDistance = GAS_TANK_SIZE * HIGHWAY_MPG;
 
-    // Displaying how much is will have risen by.
-    std::cout << "The ocean's level will be " << riseIn5Years << " millimeters higher in 5 years." << std::endl;
-    std::cout << "The ocean's level will be " << riseIn7Years << " millimeters higher in 7 years." << std::endl;
-    std::cout << "The ocean's level will be " << riseIn10Years << " millimeters higher in 10 years." << std::endl;
+    // Display the results
+    cout << "The car can travel " << townDistance << " miles on one tank of gas in town." << endl;
+    cout << "The car can travel " << highwayDistance << " miles on one tank of gas on the highway." << endl;
+
+    return 0;
 }
